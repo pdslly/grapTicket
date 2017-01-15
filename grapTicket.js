@@ -15,6 +15,8 @@ const options = {
 
 options.agent = new https.Agent(options)
 
+mailer.setMailTo("1223462135@qq.com")
+
 const queryTicket = function(){
 	https.get(options, (res) => {
 		var data = ""
@@ -33,7 +35,6 @@ const queryTicket = function(){
 					msg = `匹配车次：${code} 车票信息: 一等座[${DTO.ze_num}] 二等卧[${DTO.zy_num}]`
 					console.log(msg)
 					if(parseInt(DTO.ze_num) > 0 || parseInt(DTO.zy_num) > 0 ){
-						mailer.setMailTo("pdslly@yeah.net")
 						mailer.setMailTitle(`车次：${code}有票了！！！！！`)
 						mailer.setMailContent(msg);
 						mailer.send();
@@ -42,7 +43,6 @@ const queryTicket = function(){
 					msg = `匹配车次：${code} 车票信息: 无座[${DTO.wz_num}] 硬座[${DTO.yz_num}] 硬卧[${DTO.yw_num}]`;
 					console.log(msg)
 					if(parseInt(DTO.wz_num) > 0 || parseInt(DTO.yz_num) > 0 || parseInt(DTO.yw_num) > 0 ){
-						mailer.setMailTo("pdslly@yeah.net")
 						mailer.setMailTitle(`车次：${code}有票了！！！！！`)
 						mailer.setMailContent(msg);
 						mailer.send();

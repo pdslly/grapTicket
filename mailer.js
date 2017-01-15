@@ -6,12 +6,12 @@ var transportOption = {
 	port: 465,
 	auth: {
 		user: "313250678@qq.com",
-		pass: "zyfgtwxtdozycacg"
+		pass: ""//这里填写QQ邮箱授权码
 	}
 };
 
 var mailOption = {
-	from: "票务提醒 <313250678@qq.com>",
+	from: "票务提示 <313250678@qq.com>",
 	to: "pdslly@yeah.net",
 	subject: "hello world",
 	html: "<h1>HELLO WORLD</h1>"
