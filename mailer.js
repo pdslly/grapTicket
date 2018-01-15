@@ -6,7 +6,7 @@ var transportOption = {
 	port: 465,
 	auth: {
 		user: "313250678@qq.com",
-		pass: ""//这里填写QQ邮箱授权码
+		pass: "xiqknqtivtstbgjc"//这里填写QQ邮箱授权码
 	}
 };
 
